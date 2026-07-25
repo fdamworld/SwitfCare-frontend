@@ -4,89 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reception Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="receptionist.css">
 </head>
 <body>
     <div class="app">
         <!-- Side bar -->
-         <section>
-            
 
-            <div class="logo">
-                <img src="Assets/logo.png" alt="SwiftCare Logo">
-            </div>
+<section class="sidebar">
 
-            <nav class="nav">
-                <a href="#" class="dashboard" data-page="dashboard" >
-                    <span><span class="icon"><img src="Assets/dashboard.png" alt=""></span> Dashboard</span>    
-                </a>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="Assets/logo.png" alt="SwiftCare Logo" class="logo-img">
+  </div>
 
-            <div class="nav-group">
-                <div class="nav-item expandable" data-target="patients">
-                    <span><span class="icon"><img src="Assets/patients.png" alt=""></span> Patients</span>
-                    <span class="chevron"><img src="Assets/Vector.png" alt=""></span>
-                </div>
-                <div class="sub-menu" id="patients">
-                    <a href="#" class="sub-item">Register Patient</a>
-                    <a href="#" class="sub-item">Patient Records</a>
-                </div>
-            </div>
+  <!-- Nav -->
+  <nav class="nav">
+    <ul class="nav-list">
 
-            <div class="nav-item" data-target="doctors">
-                <span><span class="icon"><img src="Assets/doctors.png" alt=""></span> Doctors</span>
-                <span class="chevron"><img src="Assets/Vector.png" alt=""></span>
-            </div>
-            <div class="sub-menu" id="doctors">
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-house nav-icon"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
 
-            </div>
+      <!-- Expandable: Patients -->
+      <li class="nav-item has-submenu">
+        <button class="nav-link nav-toggle" type="button" aria-expanded="false" aria-controls="patients-submenu">
+          <i class="fa-solid fa-user nav-icon"></i>
+          <span>Patients</span>
+          <i class="fa-solid fa-chevron-down nav-arrow"></i>
+        </button>
+        <ul class="submenu" id="patients-submenu">
+          <li><a href="#" class="submenu-link">Register Patient</a></li>
+          <li><a href="#" class="submenu-link">Patient Records</a></li>
+        </ul>
+      </li>
 
-            <div class="nav-item">
-                <span><span class="icon"><img src="Assets/nurses.png" alt=""></span> Nurses</span>
-                <span class="chevron"><img src="Assets/Vector.png" alt=""></span>
-            </div>
-                <div class="sub-menu" id="nurses"></div>
-                <div class="nav-item expandable" data-target="receptionist">
-                <span><span class="icon"><img src="Assets/receptionist.png" alt=""></span> Receptionist</span>
-                <span class="chevron"><img src="Assets/Vector.png" alt=""></span>
-            </div>
-            <div class="sub-menu" id="receptionist">
+      <!-- Expandable: Doctors -->
+      <li class="nav-item has-submenu">
+        <button class="nav-link nav-toggle" type="button" aria-expanded="false" aria-controls="doctors-submenu">
+          <i class="fa-solid fa-user-doctor nav-icon"></i>
+          <span>Doctors</span>
+          <i class="fa-solid fa-chevron-down nav-arrow"></i>
+        </button>
+        <ul class="submenu" id="doctors-submenu">
+          <li><a href="#" class="submenu-link">Add Doctor</a></li>
+          <li><a href="#" class="submenu-link">Doctor List</a></li>
+        </ul>
+      </li>
 
-            </div>
+      <!-- Expandable: Nurses -->
+      <li class="nav-item has-submenu">
+        <button class="nav-link nav-toggle" type="button" aria-expanded="false" aria-controls="nurses-submenu">
+          <i class="fa-solid fa-user-nurse nav-icon"></i>
+          <span>Nurses</span>
+          <i class="fa-solid fa-chevron-down nav-arrow"></i>
+        </button>
+        <ul class="submenu" id="nurses-submenu">
+          <li><a href="#" class="submenu-link">Add Nurse</a></li>
+          <li><a href="#" class="submenu-link">Nurse List</a></li>
+        </ul>
+      </li>
 
-            <div class="nav-item" data-target="cashier">
-                <span class="icon"><img src="Assets/cashier.png" alt=""></span><span>Cashier</span> 
-                <span class="chevron"><img src="Assets/Vector.png" alt=""></span>
-            </div>
-            <div class="sub-menu" id="cashier">
+      <!-- Expandable: Receptionist -->
+      <li class="nav-item has-submenu">
+        <button class="nav-link nav-toggle" type="button" aria-expanded="false" aria-controls="receptionist-submenu">
+          <i class="fa-solid fa-user-tie nav-icon"></i>
+          <span>Receptionist</span>
+          <i class="fa-solid fa-chevron-down nav-arrow"></i>
+        </button>
+        <ul class="submenu" id="receptionist-submenu">
+          <li><a href="#" class="submenu-link">Add Receptionist</a></li>
+          <li><a href="#" class="submenu-link">Receptionist List</a></li>
+        </ul>
+      </li>
 
-            </div>
+      <!-- Expandable: Cashier -->
+      <li class="nav-item has-submenu">
+        <button class="nav-link nav-toggle" type="button" aria-expanded="false" aria-controls="cashier-submenu">
+          <i class="fa-solid fa-cash-register nav-icon"></i>
+          <span>Cashier</span>
+          <i class="fa-solid fa-chevron-down nav-arrow"></i>
+        </button>
+        <ul class="submenu" id="cashier-submenu">
+          <li><a href="#" class="submenu-link">Add Cashier</a></li>
+          <li><a href="#" class="submenu-link">Cashier List</a></li>
+        </ul>
+      </li>
 
-            <div class="nav-item expandable" data-target="billing">
-                <span><span class="icon"><img src="Assets/billing.png" alt=""></span> Billing</span>
-                <span class="chevron"><img src="Assets/Vector.png" alt=""></span>
-            </div>
-            <div class="sub-menu" id="billing">
+      <!-- Expandable: Billings -->
+      <li class="nav-item has-submenu">
+        <button class="nav-link nav-toggle" type="button" aria-expanded="false" aria-controls="billings-submenu">
+          <i class="fa-solid fa-file-invoice-dollar nav-icon"></i>
+          <span>Billings</span>
+          <i class="fa-solid fa-chevron-down nav-arrow"></i>
+        </button>
+        <ul class="submenu" id="billings-submenu">
+          <li><a href="#" class="submenu-link">Create Invoice</a></li>
+          <li><a href="#" class="submenu-link">Invoice History</a></li>
+        </ul>
+      </li>
 
-            </div>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-gear nav-icon"></i>
+          <span>Settings</span>
+        </a>
+      </li>
 
-            <div class="nav-item" data-target="settings">
-                <span><span class="icon"><img src="Assets/settings.png" alt=""></span> Settings</span>
-                <span class="chevron"><img src="Assets/Vector.png" alt=""></span>
-            </div>
-            <div class="sub-menu" id="settings">
+      <li class="nav-item">
+        <a href="#" class="nav-link logout-link">
+          <i class="fa-solid fa-right-from-bracket nav-icon"></i>
+          <span>Logout</span>
+        </a>
+      </li>
 
-            </div>
+    </ul>
+  </nav>
 
-            <a href="#" class="nav-item logout">
-                <span class="icon"><img src="Assets/logout.png" alt=""></span> Logout
-            </a>
-            </nav>
+  <!-- Footer note -->
+  <div class="info-box">
+    <i class="fa-solid fa-lock info-icon"></i>
+    <p>Your information is safe with us<br>We never share your data</p>
+  </div>
 
-            <div class="sidebar-footer">
-                <span class="lock-icon"><img src="Assets/secure.png" alt=""></span>
-                <p>Your information is safe with us<br>We never share your data</p>
-            </div>   
-        </section>
+</section>
+
         <!-- Main content -->
     <main class="main">
 
@@ -106,7 +154,9 @@
               <div class="user-name">Bola John</div>
               <div class="user-role">Receptionist</div>
             </div>
-            <span class="dropdown-arrow">⌄</span>
+              <span class="dropdown-arrow">
+              <i class="fa-solid fa-chevron-down nav-arrow"></i>
+              </span>                     
           </div>
         </div>
       </header>
@@ -166,7 +216,7 @@
       </section>
 
       <section class="queue-row">
-        <div class="panel queue-overview">
+        <div class="panel-queue-overview">
           <h3>Live Queue Overview</h3>
           <div class="queue-body">
             <div class="donut-wrapper">
@@ -199,7 +249,7 @@
           <button class="view-full-queue" id="viewFullQueueBtn">View full queue</button>
         </div>
 
-        <div class="panel queue-priority">
+        <div class="panel-queue-row">
           <h3>Queue by Priority</h3>
 
           <div class="priority-item">
@@ -234,7 +284,7 @@
       </section>
 
       <section class="bottom-row">
-        <div class="panel checkins-panel">
+        <div class="panel-checkins">
           <div class="panel-header">
             <h3>Recent Check-Ins</h3>
           </div>
@@ -275,7 +325,7 @@
           <button class="view-all-btn" id="viewAllCheckinsBtn">View all check-ins</button>
         </div>
 
-        <div class="panel appointments-panel">
+        <div class="panel-appointments">
           <div class="panel-header">
             <h3>Today's Appointments</h3>
             <a href="#" class="view-all-link" id="viewAllAppointmentsLink">View all</a>
@@ -291,7 +341,7 @@
                 <th>Status</th>
               </tr>
             </thead>
-            <tbody id="appointmentsBody">
+            <tbody class="appointmentsBody">
               <tr>
                 <td>09:00AM</td>
                 <td>Raji Akeem</td>
@@ -334,5 +384,21 @@
 
     </main>
     </div>
+
+    <script>
+  // Wire up every expandable nav item (Patients, Doctors, Nurses, Receptionist, Cashier, Billings)
+  const toggleButtons = document.querySelectorAll('.nav-toggle');
+
+  toggleButtons.forEach((btn) => {
+    const parentItem = btn.closest('.has-submenu');
+
+    btn.addEventListener('click', () => {
+      const isOpen = parentItem.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+    </script>
+
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
