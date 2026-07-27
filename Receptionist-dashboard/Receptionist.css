@@ -23,16 +23,6 @@ body {
   margin-right: 30px;
 }
 
-/* sidebar {
-  width: 328px;
-  background: #ffffff;
-  border-right: 1px solid #eaeaea; (comment out)
-  display: flex;
-  flex-direction: column;
-  padding: 16px 8px 16px 8px; (comment out)
-  flex-shrink: 0;
-} */
-
 /* Logo */
 .logo {
   display: flex;
