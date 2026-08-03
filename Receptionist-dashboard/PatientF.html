@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Found</title>
+<link rel="stylesheet" href="PatientF.css">
+</head>
+<body>
+
+  <div class="modal-overlay">
+    <div class="modal">
+
+      <button class="close-btn" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L19 19M19 1L1 19" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="status-banner">
+        <div class="status-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 13l4 4L19 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="status-text">
+          <h2>Patient Found</h2>
+          <p>1 patient record(s) found</p>
+        </div>
+      </div>
+
+      <div class="results-card">
+        <h3 class="results-title">Search Results</h3>
+        <hr>
+
+        <div class="patient-row">
+          <div class="patient-avatar">
+           <img src="" alt="">
+            </svg>
+          </div>
+
+          <div class="patient-info">
+            <h4>Adeoye Oyewale</h4>
+            <p><span class="label">Patient ID:</span> <span class="value">SWC-00012345</span></p>
+            <p><span class="label">Phone Number:</span> <span class="value">08123456789</span></p>
+            <p><span class="label">DOB:</span> <span class="value">16/03/1990 (34yrs)</span></p>
+          </div>
+
+          <a href="#" class="patient-arrow">
+            <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2l11 11-11 11" stroke="#2f9e5b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a> 
+            
+          
+        </div>
+      </div>
+
+      <div class="footer-row">
+        <span class="footer-text">Can't find the patient?</span>
+        <button class="register-btn"><a href="#">Register New Patient</a></button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
