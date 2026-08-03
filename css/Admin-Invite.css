@@ -16,109 +16,126 @@ body {
   min-height: 100vh;
 }
 
-.sidebar {
-  background: linear-gradient(180deg, #d7f0ff 0%, #eaf7ff 100%);
-  border-right: 1px solid #dbe6f0;
-  display: flex;
-  flex-direction: column;
-  width:105%;
+.sidebar{
+    background:linear-gradient(to bottom,#d8f2ff,#ecf8ff);
+    border-right:2px solid #2196f3;
+    display:flex;
+    flex-direction:column;
+    position:relative;
 }
 
-.logo {
-  padding: 30px 24px 10px;
+.logo{
+    padding:20px;
+    display:flex;
+    justify-content:center;
 }
 
-.logo h1 {
-  font-size: 38px;
-  line-height: 1;
-  color: #2a7de1;
+.logo img{
+    width:100%;
+    /* max-width:220px; */
+    background-position: center 55%;
 }
 
-.logo span {
-  color: #22c55e;
+.sidebar-content{
+  margin: 50px 0;
+    padding:20px 28px;
 }
 
-.sidebar-content {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.sidebar-content h2{
+    font-size:38px;
+    line-height:1.1;
+    font-weight:900;
+    margin-bottom:18px;
+    color:#000;
 }
 
-.sidebar h2 {
-  font-size: 30px;
-  line-height: 1.2;
-  font-weight: 800;
-  color: #111827;
+.sidebar-content p{
+    color:#374151;
+    line-height:1.7;
+    margin-bottom:24px;
 }
 
-.sidebar p {
-  color: #4b5563;
-  line-height: 1.6;
+.features{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.feature-item{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
 }
 
-.feature-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  background: rgba(255,255,255,.6);
-  padding: 10px;
-  border-radius: 14px;
-  margin: 0 5px;
+.feature-item i{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:#fff;
+    color:#2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.feature-item i {
-  color: #2563eb;
-  font-size: 20px;
-  margin-top: 2px;
+.feature-item strong{
+    display:block;
+    font-size:14px;
+    margin-bottom:4px;
 }
 
-.feature-item strong {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 14px;
-}
-
-.feature-item p {
-  font-size: 13px;
+.feature-item p{
+    font-size:13px;
+    margin:0;
 }
 
 .building-image{
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  flex:1;
-  min-height:100vh;
-  background-image: url("../image/complex.jpg");
-  background-size: 900px;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  position: relative;
+    flex:1;
+    min-height:250px;
+    background-image:url("../image/complex.jpg");
+    background-size:450%;
+    background-position:center 100%;
+    background-repeat:no-repeat;
 }
 
-.privacy-box {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 12px 14px;
-  background: rgba(255,255,255,.85);
-  border: 1px solid #dbe6f0;
-  border-radius: 14px;
-  font-size: 14px;
-  color: #374151;
-  position: absolute;
-  bottom: 300px;
-   right: 3px;
+.privacy-box{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+    background:rgba(255,255,255,.96);
+    border-radius:16px;
+    padding:14px 5px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 8px 18px rgba(15,23,42,.12);
 }
-.privacy-box span >p{
-  line-height: 15px;
-  text-align: center;
+
+.privacy-box i{
+    width:38px;
+    height:38px;
+
+    border-radius:10px;
+
+    background:#f1f5f9;
+    color:#111827;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.privacy-box strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:3px;
+}
+
+.privacy-box small{
+    color:#64748b;
+    font-size:12px;
 }
 
 
@@ -507,19 +524,25 @@ th {
   cursor: pointer;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #6b7280;
-  font-size: 14px;
-  padding-bottom: 10px;
+.footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap: 16px;
+    font-size:13px;
+    color:#64748b;
+    padding:6px 4px 0;
 }
 
-.footer a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 600;
+.footer div {
+    padding: 0 20px;
+}
+
+.footer div >a{
+    padding: 0 15px;
+    color:#2563eb;
+    font-weight:700;
+    text-decoration: none;
 }
 
 @media (max-width: 1100px) {
