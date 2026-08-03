@@ -5,12 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SwiftCare - Access Granted</title>
 
-        <link rel="stylesheet" href="C:\Users\info\OneDrive\Desktop\dashboard-admin\css\Access-granted.css" />
+        <link rel="stylesheet" href="css/Access-granted.css" />
 
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
       </head>
       <body>
         <div class="dashboard">
@@ -99,7 +96,7 @@
 
               <div class="divider"></div>
 
-              <button class="continue-btn">Continue</button>
+              <button class="continue-btn" id="continuebtn">Continue</button>
             </section>
 
             <section class="analytics-card">
@@ -173,5 +170,11 @@
             </footer>
           </main>
         </div>
+        <script >
+          const continuebtn = document.getElementById('continuebtn');
+          continuebtn.addEventListener('click', () => {
+            window.location.href = 'ADMIN-dashboard.html';
+          });
+        </script>
       </body>
     </html>
